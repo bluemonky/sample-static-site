@@ -1,11 +1,145 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <title>Sample Static Site</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blue Monk Consulting - DXコンサルティングサービス">
+    <title>Blue Monk Consulting</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>It works.</h1>
-  <p>GitHub Pages のサンプルサイトです。</p>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">Blue Monk Consulting</div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home">ホーム</a></li>
+                    <li><a href="#services">サービス</a></li>
+                    <li><a href="#about">会社概要</a></li>
+                    <li><a href="#contact">お問い合わせ</a></li>
+                </ul>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ヒーローセクション -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">デジタルトランスフォーメーションで<br>未来を創造する</h1>
+                <p class="hero-description">
+                    ITエンジニア × 経営者 × MBAホルダーが生み出す実行力で、<br>
+                    お客様のビジネスを次のステージへ導きます
+                </p>
+                <a href="#contact" class="btn btn-primary">お問い合わせ</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- サービスセクション -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">サービス</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🚀</div>
+                    <h3>DX戦略策定</h3>
+                    <p>経営視点とIT視点を融合させた、実行可能なDX戦略を立案します。</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>システム開発</h3>
+                    <p>20年以上のエンジニア経験を活かし、高品質なシステムを提供します。</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>業務改善支援</h3>
+                    <p>MBAの知識を活かした経営課題の分析と、具体的な改善施策をご提案します。</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎓</div>
+                    <h3>技術研修</h3>
+                    <p>最新のIT技術から経営知識まで、実践的な研修プログラムを提供します。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 会社概要セクション -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">会社概要</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>株式会社ブルーモンクコンサルティング</h3>
+                    <p class="about-description">
+                        2024年に設立された、DXコンサルティングを専門とする企業です。
+                        代表は、Javaプログラマ・SEとして2002年にキャリアをスタートし、
+                        2004年にフリーランスとして独立、2007年に株式会社ラジカルオプティを設立。
+                        2013年にはグロービス経営大学院を成績優秀修了者として修了し、
+                        IT技術と経営知識を融合させた独自のアプローチでクライアント企業を支援しています。
+                    </p>
+                    <div class="company-info">
+                        <div class="info-item">
+                            <strong>設立：</strong>2024年
+                        </div>
+                        <div class="info-item">
+                            <strong>所在地：</strong>東京都
+                        </div>
+                        <div class="info-item">
+                            <strong>代表：</strong>代表取締役CEO/CTO
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- お問い合わせセクション -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">お問い合わせ</h2>
+            <div class="contact-content">
+                <p class="contact-description">
+                    サービスに関するご質問やご相談は、以下のフォームからお気軽にお問い合わせください。
+                </p>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">お名前 <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">メールアドレス <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">会社名</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">お問い合わせ内容 <span class="required">*</span></label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">送信する</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Blue Monk Consulting Co., Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
